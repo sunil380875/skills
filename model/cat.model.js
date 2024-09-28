@@ -3,8 +3,14 @@ const {Schema,model} = require(mongoose);
 const catSchema = new Schema({
     _id:Number,
     name:String,
-    owner:String
-    
+    owner:[
+        {
+            owner:String,
+            address:{
+                place:String
+            }
+        }
+    ]
 })
 
 const Cat = model("cat",catSchema)
