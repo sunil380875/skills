@@ -11,7 +11,7 @@ const schoolSchema = new Schema({
         }
 
     ]
-},{timeseries:true})
+},{timestamps:true})
 
 const School = model("school",schoolSchema);
 
